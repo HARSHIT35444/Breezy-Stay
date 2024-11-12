@@ -5,18 +5,35 @@
 </script>
 <div class="row">
     <div class="col-8 offset-3">
+        <br>
         <h3><%= listing.title %></h3>
+        <br>
     </div>
     <div class="card col-6 offset-3 show-card listing-card">
         <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
         <div class="card-body">
+            
             <p class="card-text"><i>Owned By : <%= listing.owner.username %></i> </p>
             <p class="card-text"><%= listing.description %> </p>
             <p class="card-text">&#8377; <%= listing.price.toLocaleString("en-IN") %> </p>
             <p class="card-text"><%= listing.location %> </p>
             <p class="card-text"><%= listing.country %></p>
+            <!-- new added for payment gateway -->
+            <button class="btn btn-dark Edit-btn" type="button" id="button">Checkout & Pay</button>
+            
+            <br><br>
+             <script>
+                document.getElementById('button').addEventListener('click', function() {
+
+
+                    window.location.href = `/paynew/${listing._id}`;
+                    // console.log("submit button pressed");
+                });
+            </script> 
         </div>
     </div>
+
+ 
 
     <%  if(currUser && listing.owner._id.equals(currUser._id)) { %>
     <div class="btns">

@@ -25,9 +25,13 @@ module.exports.showListing = async (req,res) => {
         req.flash("errors","Listing you requested does not exist!");
         res.redirect("/listings");
     }
-    console.log(listing);
-    res.render("listings/show.ejs",{listing});
-}
+
+    res.render("listings/show.ejs",{listing });
+
+    
+};
+
+
 
 module.exports.createListing = async(req , res , next) => {
     let response = await geocodingClient.forwardGeocode({
