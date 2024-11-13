@@ -61,8 +61,8 @@ const { showListing } = require("./controllers/listings.js");
 // const { payListing } = require("./controllers/pay.js");
 
 
-const MONGO_URL = 'mongodb://127.0.0.1:27017/wanderlust'
-// const dbUrl = process.env.ATLASDB_URL;
+// const MONGO_URL = 'mongodb://127.0.0.1:27017/wanderlust'
+const dbUrl = process.env.ATLASDB_URL;
 
 main().then(() => {
     console.log("connected to db");
@@ -81,17 +81,17 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-// const store = MongoStore.create({
-//     mongoUrl: dbUrl,
-//     crypto: {
-//         secret: process.env.SECRET,
-//     },
-//     touchAfter: 24 * 3600,
-// });
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto: {
+        secret: process.env.SECRET,
+    },
+    touchAfter: 24 * 3600,
+});
 
-// store.on("error",() => {
-//     console.log("ERROR IN MONGO SESSION STORE",err);
-// });
+store.on("error",() => {
+    console.log("ERROR IN MONGO SESSION STORE",err);
+});
 
 const sessionOptions = {
     // store,
