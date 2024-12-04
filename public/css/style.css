@@ -18,7 +18,7 @@ body {
 }
 
 .fa-compass {
-    color: #fe424d;
+    color: #bc8880;
     font-size: 2rem;
 }
 
@@ -49,6 +49,7 @@ body {
 .f-info-socials i {
     font-size: 1.2rem;
     margin-right: 1rem;
+    color: #bc8880;
 }
 
 .f-info {
@@ -100,15 +101,16 @@ body {
 /* new page */
 
 .Add-btn {
-    background-color: #fe424d !important;
+    background-color: #bc8880 !important;
     border: none !important;
 }
 
 /* Edit page */
 .Edit-btn {
-    background-color: #fe424d !important;
+    background-color: #bc8880 !important;
     border: none !important;
 }
+
 
 /* show page */
 
@@ -130,3 +132,4 @@ body {
     height: 400px;
     width: 80vh;
 }
+

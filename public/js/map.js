@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
     zoom: 9// starting zoom
 });
 
-const marker = new mapboxgl.Marker({ color: 'red' })
+const marker = new mapboxgl.Marker({ color: '#bc8880' })
     .setLngLat(listing.geometry.coordinates)  //listing.geometry.coordinates 
     .setPopup(new mapboxgl.Popup({offset: 25 })
     .setHTML(

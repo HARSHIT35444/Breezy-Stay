@@ -17,47 +17,47 @@
       margin: 0;
     }
     .container {
-      max-width: 500px;
-      background: #fe424d;
+      max-width: 700px; /* Further increased size */
+      background: #ffffff;
+      /* Removed border */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      color: #ffffff;
+      padding: 60px; /* Further increased padding */
+      color: #000000; /* Changed font color to black */
       text-align: center;
     }
     .checkmark {
-      font-size: 80px;
-      margin-bottom: 20px;
+      display: none; /* Hide the checkmark */
     }
     h1 {
       font-weight: 700;
       font-size: 32px;
       margin-bottom: 15px;
+      color: #000000; /* Changed font color to black */
     }
     p {
       font-size: 18px;
       margin-bottom: 30px;
       line-height: 1.5;
+      color: #000000; /* Changed font color to black */
     }
     .btn-primary {
-      background-color: #ffffff;
-      color: #fe424d;
-      border-color: #ffffff;
+      background-color: #bc8880;
+      color: #ffffff;
+      border-color: #bc8880;
       padding: 12px 25px;
       font-size: 16px;
       border-radius: 6px;
       transition: background-color 0.3s, color 0.3s;
     }
     .btn-primary:hover {
-      background-color: #ffffff;
-      color: #ffffff;
-      border-color: #ffffff;
+      background-color: #a06f68;
+      border-color: #a06f68;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="checkmark">✓</div>
     <h1>Success!</h1>
     <p>Your booking has been completed successfully. Thank you for choosing us!</p>
     <a href="http://localhost:8080/listings" class="btn btn-primary">Go to Home Page</a>

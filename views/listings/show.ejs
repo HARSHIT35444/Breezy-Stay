@@ -3,6 +3,7 @@
     const mapToken = "<%= process.env.MAP_TOKEN %>";
     const listing = <%- JSON.stringify(listing) %>;
 </script>
+
 <div class="row">
     <div class="col-8 offset-3">
         <br>
@@ -12,14 +13,14 @@
     <div class="card col-6 offset-3 show-card listing-card">
         <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
         <div class="card-body">
-            
-            <p class="card-text"><i>Owned By : <%= listing.owner.username %></i> </p>
+            <br>
+            <p class="card-text"><b><i>Owned By : <%= listing.owner.username %></i></b> </p>
             <p class="card-text"><%= listing.description %> </p>
             <p class="card-text">&#8377; <%= listing.price.toLocaleString("en-IN") %> </p>
             <p class="card-text"><%= listing.location %> </p>
             <p class="card-text"><%= listing.country %></p>
             <!-- new added for payment gateway -->
-            <button class="btn btn-dark Edit-btn" type="button" id="button">Checkout & Pay</button>
+             <button class="btn btn-dark Edit-btn" type="button" id="button">Checkout & Pay</button>
             
             <br><br>
              <script>
@@ -29,7 +30,7 @@
                     window.location.href = `/paynew/${listing._id}`;
                     // console.log("submit button pressed");
                 });
-            </script> 
+            </script>  
         </div>
     </div>
 
